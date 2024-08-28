@@ -8,66 +8,65 @@ class RegisterForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Container(
-        padding: const EdgeInsets.fromLTRB(50, 20, 50, 20),
-        alignment: Alignment.bottomLeft,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "Email Address",
-                  style: TextStyle(
-                    color: Colors.black45,
-                    fontFamily: 'SF-PRO',
-                    fontSize: UtilSize.responsiveFontSize(context, 15),
-                  ),
+    return Container(
+      padding: const EdgeInsets.fromLTRB(50, 20, 50, 20),
+      alignment: Alignment.bottomLeft,
+      child: Column(
+        mainAxisAlignment:
+            MainAxisAlignment.spaceBetween, // Chia khoảng cách đều
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Email Address",
+                style: TextStyle(
+                  color: Colors.black45,
+                  fontFamily: 'SF-PRO',
+                  fontSize: UtilSize.responsiveFontSize(context, 15),
                 ),
-                const BaseTextField(
-                  hintText: "Email",
-                ),
-                const SizedBox(height: 20),
-                Text(
-                  "Password",
-                  style: TextStyle(
-                    color: Colors.black45,
-                    fontFamily: 'SF-PRO',
-                    fontSize: UtilSize.responsiveFontSize(context, 15),
-                  ),
-                ),
-                const BaseTextField(
-                  isPassword: true,
-                  hintText: "Password",
-                ),
-                const SizedBox(height: 20),
-                Text(
-                  "Re-password",
-                  style: TextStyle(
-                    color: Colors.black45,
-                    fontFamily: 'SF-PRO',
-                    fontSize: UtilSize.responsiveFontSize(context, 15),
-                  ),
-                ),
-                const BaseTextField(
-                  isPassword: true,
-                  hintText: "Re-password",
-                ),
-              ],
-            ),
-            Center(
-              child: CustomElevatedButton(
-                onPressed: () {},
-                text: "Register",
-                btnColor: const Color(0xFFFA4A0C),
-                textColor: Colors.white,
               ),
-            )
-          ],
-        ),
+              const BaseTextField(
+                hintText: "Email",
+              ),
+              const SizedBox(height: 20),
+              Text(
+                "Password",
+                style: TextStyle(
+                  color: Colors.black45,
+                  fontFamily: 'SF-PRO',
+                  fontSize: UtilSize.responsiveFontSize(context, 15),
+                ),
+              ),
+              const BaseTextField(
+                isPassword: true,
+                hintText: "Password",
+              ),
+              const SizedBox(height: 20),
+              Text(
+                "Re-Password",
+                style: TextStyle(
+                  color: Colors.black45,
+                  fontFamily: 'SF-PRO',
+                  fontSize: UtilSize.responsiveFontSize(context, 15),
+                ),
+              ),
+              const BaseTextField(
+                isPassword: true,
+                hintText: "Re-Password",
+              ),
+            ],
+          ),
+          Center(
+            child: CustomElevatedButton(
+              onPressed: () {},
+              text: "Register",
+              btnColor: const Color(0xFFFA4A0C),
+              textColor: Colors.white,
+            ),
+          )
+        ],
       ),
     );
   }
