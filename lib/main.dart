@@ -12,8 +12,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(body: LoginScreen()),
+      home: Scaffold(
+        resizeToAvoidBottomInset: false,
+        body: LoginScreen(),
+      ),
     );
   }
 }
-

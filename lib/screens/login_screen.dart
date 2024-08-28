@@ -77,7 +77,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               color: Colors.black,
                               fontFamily: 'SF-PRO',
                               fontWeight: FontWeight.normal,
-                              fontSize: 15,
+                              fontSize: 18,
                               height: 0.9,
                             ),
                           ),
@@ -114,7 +114,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 color: Colors.black,
                                 fontFamily: 'SF-PRO',
                                 fontWeight: FontWeight.normal,
-                                fontSize: 15,
+                                fontSize: 18,
                                 height: 0.9,
                               ),
                             ),
@@ -125,7 +125,35 @@ class _LoginScreenState extends State<LoginScreen> {
               ],
             ),
           ),
-          const MyForm(),
+          const Expanded(
+              child: MyForm(),
+            ),
+          Center(
+            child: Container(
+              margin: const EdgeInsets.all(20),
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFFFF460A),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 85, vertical: 20),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  elevation: 0,
+                ),
+                child: const Text(
+                  "Login",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: 'SF-PRO',
+                    fontWeight: FontWeight.w300,
+                    fontSize: 15,
+                  ),
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );

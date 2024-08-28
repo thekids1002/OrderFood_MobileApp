@@ -18,7 +18,7 @@ class MyForm extends StatelessWidget {
             style: TextStyle(
               color: Colors.black45,
               fontFamily: 'SF-PRO',
-              fontSize: 12,
+              fontSize: 13,
             ),
           ),
           const BaseTextField(
@@ -30,7 +30,7 @@ class MyForm extends StatelessWidget {
             style: TextStyle(
               color: Colors.black45,
               fontFamily: 'SF-PRO',
-              fontSize: 12,
+              fontSize: 13,
             ),
           ),
           const BaseTextField(
@@ -42,36 +42,11 @@ class MyForm extends StatelessWidget {
             "Forgot passcode",
             style: TextStyle(
               color: Color.fromARGB(255, 141, 91, 17),
-              fontSize: 12,
+              fontSize: 13,
               fontFamily: 'SF-PRO',
               fontWeight: FontWeight.w400,
             ),
           ),
-          Center(
-              child: Container(
-            margin: const EdgeInsets.only(top: 50),
-            child: ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFFFF460A),
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 85, vertical: 10),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30),
-                ),
-                elevation: 0,
-              ),
-              child: const Text(
-                "Login",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontFamily: 'SF-PRO',
-                  fontWeight: FontWeight.w300,
-                  fontSize: 15,
-                ),
-              ),
-            ),
-          ))
         ],
       ),
     );
