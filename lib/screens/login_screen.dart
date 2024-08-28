@@ -3,6 +3,7 @@ import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:orderfood1/form/login_form.dart';
+import 'package:orderfood1/utils/reponsive.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -51,11 +52,11 @@ class _LoginScreenState extends State<LoginScreen> {
                     Flexible(
                       flex: 1,
                       child: Container(
-                        margin: const EdgeInsets.only(left: 10,right: 10),
+                        margin: const EdgeInsets.only(left: 10, right: 10),
                         decoration: const BoxDecoration(
                           border: Border(
-                            bottom:
-                                BorderSide(color: Color(0xFFFA4A0C), width: 1.5),
+                            bottom: BorderSide(
+                                color: Color(0xFFFA4A0C), width: 1.5),
                           ),
                         ),
                         child: TextButton(
@@ -71,24 +72,24 @@ class _LoginScreenState extends State<LoginScreen> {
                               ),
                             ),
                           ),
-                          child: const Text(
+                          child: Text(
                             "Login",
                             style: TextStyle(
                               color: Colors.black,
                               fontFamily: 'SF-PRO',
                               fontWeight: FontWeight.normal,
-                              fontSize: 18,
+                              fontSize:
+                                  UtilSize.responsiveFontSize(context, 18),
                               height: 0.9,
                             ),
                           ),
                         ),
                       ),
                     ),
-                    
                     Flexible(
                         flex: 1,
                         child: Container(
-                           margin: const EdgeInsets.only(left: 10,right: 10),
+                          margin: const EdgeInsets.only(left: 10, right: 10),
                           // decoration: const BoxDecoration(
                           //   border: Border(
                           //     bottom: BorderSide(
@@ -108,13 +109,14 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ),
                               ),
                             ),
-                            child: const Text(
+                            child: Text(
                               "Sign-up",
                               style: TextStyle(
                                 color: Colors.black,
                                 fontFamily: 'SF-PRO',
                                 fontWeight: FontWeight.normal,
-                                fontSize: 18,
+                                fontSize:
+                                    UtilSize.responsiveFontSize(context, 18),
                                 height: 0.9,
                               ),
                             ),
@@ -126,8 +128,8 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
           const Expanded(
-              child: MyForm(),
-            ),
+            child: MyForm(),
+          ),
           Center(
             child: Container(
               margin: const EdgeInsets.all(20),
@@ -142,13 +144,13 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   elevation: 0,
                 ),
-                child: const Text(
+                child:  Text(
                   "Login",
                   style: TextStyle(
                     color: Colors.white,
                     fontFamily: 'SF-PRO',
                     fontWeight: FontWeight.w300,
-                    fontSize: 15,
+                    fontSize: UtilSize.responsiveFontSize(context,15),
                   ),
                 ),
               ),

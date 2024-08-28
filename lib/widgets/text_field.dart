@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:orderfood1/utils/reponsive.dart';
 
 class BaseTextField extends StatefulWidget {
   final bool isPassword;
@@ -24,7 +25,7 @@ class _BaseTextFieldState extends State<BaseTextField> {
       decoration: InputDecoration(
         hintText: widget.hintText,
         hintStyle: TextStyle(
-          fontSize: 12, // Kích thước hint text
+          fontSize: UtilSize.responsiveFontSize(context, 12),
           color: Colors.grey, // Màu hint text
           fontFamily: 'SF-PRO',
         ),
@@ -55,11 +56,11 @@ class _BaseTextFieldState extends State<BaseTextField> {
       enableSuggestions: !widget.isPassword, // Tắt gợi ý khi nhập mật khẩu
       autocorrect: !widget.isPassword,
       style: TextStyle(
-        fontSize: 14, // Kích thước chữ
-        color: Colors.black, // Màu chữ
-        fontFamily: 'SF-PRO',
-        fontWeight: FontWeight.w200
-      ), // Tắt chính tả tự động khi nhập mật khẩu
+          fontSize: UtilSize.responsiveFontSize(context, 14),
+          color: Colors.black, // Màu chữ
+          fontFamily: 'SF-PRO',
+          fontWeight:
+              FontWeight.w200), // Tắt chính tả tự động khi nhập mật khẩu
     );
   }
 }

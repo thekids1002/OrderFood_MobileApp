@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:orderfood1/utils/reponsive.dart';
 import 'package:orderfood1/widgets/text_field.dart';
 
 class MyForm extends StatelessWidget {
@@ -13,24 +14,24 @@ class MyForm extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
+          Text(
             "Email Address",
             style: TextStyle(
               color: Colors.black45,
               fontFamily: 'SF-PRO',
-              fontSize: 13,
+              fontSize: UtilSize.responsiveFontSize(context, 13),
             ),
           ),
           const BaseTextField(
             hintText: "Email",
           ),
           const SizedBox(height: 20),
-          const Text(
+          Text(
             "Password",
             style: TextStyle(
               color: Colors.black45,
               fontFamily: 'SF-PRO',
-              fontSize: 13,
+              fontSize: UtilSize.responsiveFontSize(context, 13),
             ),
           ),
           const BaseTextField(
@@ -38,11 +39,11 @@ class MyForm extends StatelessWidget {
             hintText: "Password",
           ),
           const SizedBox(height: 25),
-          const Text(
+          Text(
             "Forgot passcode",
             style: TextStyle(
               color: Color.fromARGB(255, 141, 91, 17),
-              fontSize: 13,
+              fontSize: UtilSize.responsiveFontSize(context, 16),
               fontFamily: 'SF-PRO',
               fontWeight: FontWeight.w400,
             ),
