@@ -17,20 +17,25 @@ class MyForm extends StatelessWidget {
             "Email Address",
             style: TextStyle(
               color: Colors.black45,
+              fontFamily: 'SF-PRO',
               fontSize: 12,
             ),
           ),
-          const BaseTextField(),
+          const BaseTextField(
+            hintText: "Email",
+          ),
           const SizedBox(height: 20),
           const Text(
             "Password",
             style: TextStyle(
               color: Colors.black45,
+              fontFamily: 'SF-PRO',
               fontSize: 12,
             ),
           ),
           const BaseTextField(
             isPassword: true,
+            hintText: "Password",
           ),
           const SizedBox(height: 25),
           const Text(

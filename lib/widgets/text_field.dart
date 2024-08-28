@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
 class BaseTextField extends StatefulWidget {
-  final bool isPassword; 
-
+  final bool isPassword;
+  final String hintText;
   const BaseTextField({
     super.key,
-    this.isPassword = false, 
+    this.isPassword = false,
+    this.hintText = '',
   });
 
   @override
@@ -19,9 +20,14 @@ class _BaseTextFieldState extends State<BaseTextField> {
   Widget build(BuildContext context) {
     return TextFormField(
       controller: _controller,
-      obscureText: widget.isPassword, 
+      obscureText: widget.isPassword,
       decoration: InputDecoration(
-        hintText: widget.isPassword ? 'Password' : 'Enter text',
+        hintText: widget.hintText,
+        hintStyle: TextStyle(
+          fontSize: 12, // Kích thước hint text
+          color: Colors.grey, // Màu hint text
+          fontFamily: 'SF-PRO',
+        ),
         border: UnderlineInputBorder(),
         enabledBorder: UnderlineInputBorder(
           borderSide: BorderSide(
@@ -47,7 +53,13 @@ class _BaseTextFieldState extends State<BaseTextField> {
         print("Value changed: $value");
       },
       enableSuggestions: !widget.isPassword, // Tắt gợi ý khi nhập mật khẩu
-      autocorrect: !widget.isPassword, // Tắt chính tả tự động khi nhập mật khẩu
+      autocorrect: !widget.isPassword,
+      style: TextStyle(
+        fontSize: 14, // Kích thước chữ
+        color: Colors.black, // Màu chữ
+        fontFamily: 'SF-PRO',
+        fontWeight: FontWeight.w200
+      ), // Tắt chính tả tự động khi nhập mật khẩu
     );
   }
 }

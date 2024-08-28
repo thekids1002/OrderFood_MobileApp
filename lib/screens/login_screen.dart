@@ -20,16 +20,18 @@ class _LoginScreenState extends State<LoginScreen> {
     return Container(
       margin: const EdgeInsets.only(top: 24),
       decoration: BoxDecoration(
-        color: const Color(0xFFF2F2F2),
+        color: Color.fromARGB(255, 246, 234, 234),
         borderRadius: BorderRadius.circular(10),
       ),
       child: Column(
         children: [
           Container(
             height: dHeight * 0.4,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.white,
-              borderRadius: BorderRadius.circular(30),
+              borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(30.0),
+                  bottomRight: Radius.circular(30.0)),
             ),
             child: Column(
               children: [
@@ -49,10 +51,11 @@ class _LoginScreenState extends State<LoginScreen> {
                     Flexible(
                       flex: 1,
                       child: Container(
+                        margin: const EdgeInsets.only(left: 10,right: 10),
                         decoration: const BoxDecoration(
                           border: Border(
                             bottom:
-                                BorderSide(color: Color(0xFFFA4A0C), width: 2),
+                                BorderSide(color: Color(0xFFFA4A0C), width: 1.5),
                           ),
                         ),
                         child: TextButton(
@@ -81,12 +84,11 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      width: 20,
-                    ),
+                    
                     Flexible(
                         flex: 1,
                         child: Container(
+                           margin: const EdgeInsets.only(left: 10,right: 10),
                           // decoration: const BoxDecoration(
                           //   border: Border(
                           //     bottom: BorderSide(
