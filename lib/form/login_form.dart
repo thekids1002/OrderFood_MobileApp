@@ -12,7 +12,8 @@ class LoginForm extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(50, 20, 50, 20),
       alignment: Alignment.bottomLeft,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween, // Chia khoảng cách đều
+        mainAxisAlignment:
+            MainAxisAlignment.spaceBetween, // Chia khoảng cách đều
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Column(
@@ -46,7 +47,7 @@ class LoginForm extends StatelessWidget {
               Text(
                 "Forgot passcode",
                 style: TextStyle(
-                  color: Color.fromARGB(255, 141, 91, 17),
+                  color: const Color.fromARGB(255, 141, 91, 17),
                   fontSize: UtilSize.responsiveFontSize(context, 16),
                   fontFamily: 'SF-PRO',
                   fontWeight: FontWeight.w400,
@@ -54,13 +55,14 @@ class LoginForm extends StatelessWidget {
               ),
             ],
           ),
-          // Đẩy nút Login xuống dưới cùng
-          CustomElevatedButton(
-            onPressed: () {},
-            text: "Login",
-            btnColor: Color(0xFFFA4A0C),
-            textColor: Colors.white,
-          ),
+          Center(
+            child: CustomElevatedButton(
+              onPressed: () {},
+              text: "Login",
+              btnColor: const Color(0xFFFA4A0C),
+              textColor: Colors.white,
+            ),
+          )
         ],
       ),
     );

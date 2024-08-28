@@ -3,6 +3,7 @@ import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:orderfood1/form/login_form.dart';
+import 'package:orderfood1/form/register_form.dart';
 import 'package:orderfood1/utils/reponsive.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -95,7 +96,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: TabBarView(
                     children: [
                       Center(child: LoginForm()),
-                      Center(child: Text("Nội dung Tab 2")),
+                      Center(child: RegisterForm()),
                     ],
                   ),
                 ),
