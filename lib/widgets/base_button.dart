@@ -4,11 +4,15 @@ import 'package:orderfood1/utils/reponsive.dart';
 class CustomElevatedButton extends StatelessWidget {
   final String text;
   final VoidCallback onPressed;
+  final Color btnColor;
+  final Color textColor;
 
   const CustomElevatedButton({
     super.key,
     required this.text,
     required this.onPressed,
+    this.btnColor = Colors.transparent,
+    this.textColor = Colors.transparent,
   });
 
   @override
@@ -18,7 +22,7 @@ class CustomElevatedButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.white,
+          backgroundColor: btnColor != Colors.transparent ? btnColor : Colors.white,
           padding: const EdgeInsets.symmetric(
               horizontal: 85, vertical: 20), // Padding cho nút
           shape: RoundedRectangleBorder(
@@ -29,7 +33,7 @@ class CustomElevatedButton extends StatelessWidget {
         child: Text(
           text,
           style: TextStyle(
-            color: Color(0xFFFF460A),
+            color: textColor != Colors.transparent ?  textColor : Color(0xFFFA4A0C),
             fontFamily: 'SF-PRO',
             fontWeight: FontWeight.w300,
             fontSize: UtilSize.responsiveFontSize(context, 15),
