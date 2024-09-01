@@ -22,6 +22,12 @@ class _BaseTextFieldState extends State<BaseTextField> {
     return TextFormField(
       controller: _controller,
       obscureText: widget.isPassword,
+      validator: (value) {
+        if (value == null || value.isEmpty) {
+          return 'Please enter some text';
+        }
+        return null;
+      },
       decoration: InputDecoration(
         hintText: widget.hintText,
         hintStyle: TextStyle(
@@ -29,20 +35,20 @@ class _BaseTextFieldState extends State<BaseTextField> {
           color: Colors.grey, // Màu hint text
           fontFamily: 'SF-PRO',
         ),
-        border: UnderlineInputBorder(),
-        enabledBorder: UnderlineInputBorder(
+        border: const UnderlineInputBorder(),
+        enabledBorder: const UnderlineInputBorder(
           borderSide: BorderSide(
             width: 1,
           ),
           borderRadius: BorderRadius.zero,
         ),
-        focusedBorder: UnderlineInputBorder(
+        focusedBorder: const UnderlineInputBorder(
           borderSide: BorderSide(
             width: 1,
           ),
           borderRadius: BorderRadius.zero,
         ),
-        errorBorder: UnderlineInputBorder(
+        errorBorder: const UnderlineInputBorder(
           borderSide: BorderSide(
             width: 1,
           ),
