@@ -4,10 +4,12 @@ import 'package:orderfood1/utils/reponsive.dart';
 class BaseTextField extends StatefulWidget {
   final bool isPassword;
   final String hintText;
+  final String? Function(String?)? validator;
   const BaseTextField({
     super.key,
     this.isPassword = false,
     this.hintText = '',
+    this.validator ,
   });
 
   @override
@@ -22,13 +24,14 @@ class _BaseTextFieldState extends State<BaseTextField> {
     return TextFormField(
       controller: _controller,
       obscureText: widget.isPassword,
-      validator: (value) {
+      validator: widget.validator ?? (value) {
         if (value == null || value.isEmpty) {
           return 'Please enter some text';
         }
         return null;
       },
       decoration: InputDecoration(
+        errorMaxLines: 2,
         hintText: widget.hintText,
         hintStyle: TextStyle(
           fontSize: UtilSize.responsiveFontSize(context, 12),

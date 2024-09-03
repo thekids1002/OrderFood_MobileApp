@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:orderfood1/utils/reponsive.dart';
+import 'package:orderfood1/validation/email_validator.dart';
+import 'package:orderfood1/validation/password_validator.dart';
 import 'package:orderfood1/widgets/text_field.dart';
 
 import '../widgets/base_button.dart';
@@ -38,6 +40,7 @@ class _LoginFormState extends State<LoginForm> {
                 ),
                 const BaseTextField(
                   hintText: "Email",
+                  validator: EmailValidator.validateEmail,
                 ),
                 const SizedBox(height: 20),
                 Text(
@@ -51,6 +54,7 @@ class _LoginFormState extends State<LoginForm> {
                 const BaseTextField(
                   isPassword: true,
                   hintText: "Password",
+                  validator: PasswordValidator.validatePassword,
                 ),
                 const SizedBox(height: 25),
                 Text(
