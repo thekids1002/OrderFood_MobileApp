@@ -1,28 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:orderfood1/utils/reponsive.dart';
 
-class BaseTextField extends StatefulWidget {
+class AppTextField extends StatefulWidget {
   final bool isPassword;
   final String hintText;
   final String? Function(String?)? validator;
-  const BaseTextField({
+  final TextEditingController? controller;
+  const AppTextField({
     super.key,
     this.isPassword = false,
     this.hintText = '',
     this.validator ,
+    this.controller,
   });
 
   @override
-  _BaseTextFieldState createState() => _BaseTextFieldState();
+  _AppTextFieldState createState() => _AppTextFieldState();
 }
 
-class _BaseTextFieldState extends State<BaseTextField> {
-  final TextEditingController _controller = TextEditingController();
+class _AppTextFieldState extends State<AppTextField> {
+  
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      controller: _controller,
+      controller: widget.controller,
       obscureText: widget.isPassword,
       validator: widget.validator ?? (value) {
         if (value == null || value.isEmpty) {

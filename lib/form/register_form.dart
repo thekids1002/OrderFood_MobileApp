@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:orderfood1/utils/reponsive.dart';
+import 'package:orderfood1/themes/login_styles.dart';
 import 'package:orderfood1/validation/email_validator.dart';
 import 'package:orderfood1/validation/password_validator.dart';
-import 'package:orderfood1/widgets/text_field.dart';
+import 'package:orderfood1/widgets/app_text_field.dart';
 
-import '../widgets/base_button.dart';
+import '../widgets/primary_button.dart';
 
 class RegisterForm extends StatefulWidget {
   const RegisterForm({super.key});
@@ -15,6 +15,9 @@ class RegisterForm extends StatefulWidget {
 
 class _RegisterFormState extends State<RegisterForm> {
   final _formKey = GlobalKey<FormState>();
+  final TextEditingController _pass = TextEditingController();
+  final TextEditingController _confirmPass = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -31,48 +34,39 @@ class _RegisterFormState extends State<RegisterForm> {
               children: [
                 Text(
                   "Email Address",
-                  style: TextStyle(
-                    color: Colors.black45,
-                    fontFamily: 'SF-PRO',
-                    fontSize: UtilSize.responsiveFontSize(context, 15),
-                  ),
+                  style: LoginStyle.titleFormStyle(context),
                 ),
-                const BaseTextField(
+                const AppTextField(
                   hintText: "Email",
                   validator: EmailValidator.validateEmail,
                 ),
                 const SizedBox(height: 20),
                 Text(
                   "Password",
-                  style: TextStyle(
-                    color: Colors.black45,
-                    fontFamily: 'SF-PRO',
-                    fontSize: UtilSize.responsiveFontSize(context, 15),
-                  ),
+                  style: LoginStyle.titleFormStyle(context),
                 ),
-                const BaseTextField(
+                AppTextField(
                   isPassword: true,
                   hintText: "Password",
                   validator: PasswordValidator.validatePassword,
+                  controller: _pass,
                 ),
                 const SizedBox(height: 20),
                 Text(
                   "Re-Password",
-                  style: TextStyle(
-                    color: Colors.black45,
-                    fontFamily: 'SF-PRO',
-                    fontSize: UtilSize.responsiveFontSize(context, 15),
-                  ),
+                  style: LoginStyle.titleFormStyle(context),
                 ),
-                const BaseTextField(
+                AppTextField(
                   isPassword: true,
                   hintText: "Re-Password",
-                  validator: PasswordValidator.validatePassword,
+                  validator: (value) =>
+                      PasswordValidator.validateRepassword(value, _pass.text),
+                  controller: _confirmPass,
                 ),
               ],
             ),
             Center(
-              child: CustomElevatedButton(
+              child: PrimaryButton(
                 onPressed: () {
                   if (_formKey.currentState?.validate() ?? false) {
                     ScaffoldMessenger.of(context).showSnackBar(

@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:orderfood1/form/login_form.dart';
 import 'package:orderfood1/form/register_form.dart';
 import 'package:orderfood1/utils/reponsive.dart';
@@ -23,13 +20,13 @@ class _LoginScreenState extends State<LoginScreen> {
       children: [
         Container(
           height: double.infinity,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Color(0xFFF2F2F2),
           ),
         ),
         Container(
           height: dHeight * 0.4,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(30.0),
@@ -51,7 +48,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: TabBar(
                     tabs: [
                       Tab(
-                        child: Container(
+                        child: SizedBox(
                           width: 100,
                           child: Center(
                             child: Text(
@@ -69,7 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                       Tab(
-                        child: Container(
+                        child: SizedBox(
                           width: 100,
                           child: Center(
                             child: Text(
@@ -89,10 +86,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     ],
                     labelColor: Colors.black,
                     dividerColor: Colors.transparent,
-                    indicatorColor: Color(0xFFFA4A0C),
+                    indicatorColor: const Color(0xFFFA4A0C),
                   ),
                 ),
-                Expanded(
+                const Expanded(
                   child: TabBarView(
                     children: [
                       Center(child: LoginForm()),
@@ -105,41 +102,6 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
         )
       ],
-    );
-  }
-}
-
-class ButtonLogin extends StatelessWidget {
-  const ButtonLogin({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        margin: const EdgeInsets.all(20),
-        child: ElevatedButton(
-          onPressed: () {},
-          style: ElevatedButton.styleFrom(
-            backgroundColor: const Color(0xFFFF460A),
-            padding: const EdgeInsets.symmetric(horizontal: 85, vertical: 20),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(30),
-            ),
-            elevation: 0,
-          ),
-          child: Text(
-            "Login",
-            style: TextStyle(
-              color: Colors.white,
-              fontFamily: 'SF-PRO',
-              fontWeight: FontWeight.w300,
-              fontSize: UtilSize.responsiveFontSize(context, 15),
-            ),
-          ),
-        ),
-      ),
     );
   }
 }

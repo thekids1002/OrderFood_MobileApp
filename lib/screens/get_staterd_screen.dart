@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:orderfood1/utils/reponsive.dart';
 
-import '../widgets/base_button.dart';
+import '../widgets/primary_button.dart';
 
 class GetStatredScreen extends StatelessWidget {
   const GetStatredScreen({super.key});
@@ -101,7 +101,7 @@ class GetStatredScreen extends StatelessWidget {
             ),
           ),
           Center(
-            child: CustomElevatedButton(
+            child: PrimaryButton(
               text: "Get Started",
               onPressed: () {},
             ),

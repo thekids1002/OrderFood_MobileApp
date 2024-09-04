@@ -15,4 +15,14 @@ class PasswordValidator {
     }
     return null;
   }
+
+  static String? validateRepassword(String? value, String valueCompare) {
+    if (value == null || value.isEmpty) {
+      return 'Re-Password cannot be empty';
+    }
+    if (value != valueCompare) {
+      return 'Passwords do not match';
+    }
+    return validatePassword(value);
+  }
 }

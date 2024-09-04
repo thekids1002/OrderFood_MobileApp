@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:orderfood1/utils/reponsive.dart';
 
-class CustomElevatedButton extends StatelessWidget {
+class PrimaryButton extends StatelessWidget {
   final String text;
   final VoidCallback onPressed;
   final Color btnColor;
   final Color textColor;
 
-  const CustomElevatedButton({
+  const PrimaryButton({
     super.key,
     required this.text,
     required this.onPressed,
@@ -23,18 +23,20 @@ class CustomElevatedButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          backgroundColor: btnColor != Colors.transparent ? btnColor : Colors.white,
-          padding: const EdgeInsets.symmetric(
-              horizontal: 85, vertical: 20), // Padding cho nút
+          backgroundColor:
+              btnColor != Colors.transparent ? btnColor : Colors.white,
+          padding: const EdgeInsets.symmetric(horizontal: 85, vertical: 20),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30),
           ),
-          elevation: 0, // Đặt độ nổi của nút
+          elevation: 0,
         ),
         child: Text(
           text,
           style: TextStyle(
-            color: textColor != Colors.transparent ?  textColor : Color(0xFFFA4A0C),
+            color: textColor != Colors.transparent
+                ? textColor
+                : const Color(0xFFFA4A0C),
             fontFamily: 'SF-PRO',
             fontWeight: FontWeight.w300,
             fontSize: UtilSize.responsiveFontSize(context, 15),

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:orderfood1/themes/login_styles.dart';
 import 'package:orderfood1/utils/reponsive.dart';
 import 'package:orderfood1/validation/email_validator.dart';
 import 'package:orderfood1/validation/password_validator.dart';
-import 'package:orderfood1/widgets/text_field.dart';
+import 'package:orderfood1/widgets/app_text_field.dart';
 
-import '../widgets/base_button.dart';
+import '../widgets/primary_button.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({super.key});
@@ -19,7 +20,7 @@ class _LoginFormState extends State<LoginForm> {
   @override
   Widget build(BuildContext context) {
     return Form(
-      key: _formKey, 
+      key: _formKey,
       child: Container(
         padding: const EdgeInsets.fromLTRB(50, 20, 50, 20),
         alignment: Alignment.bottomLeft,
@@ -32,26 +33,18 @@ class _LoginFormState extends State<LoginForm> {
               children: [
                 Text(
                   "Email Address",
-                  style: TextStyle(
-                    color: Colors.black45,
-                    fontFamily: 'SF-PRO',
-                    fontSize: UtilSize.responsiveFontSize(context, 15),
-                  ),
+                  style: LoginStyle.titleFormStyle(context),
                 ),
-                const BaseTextField(
+                const AppTextField(
                   hintText: "Email",
                   validator: EmailValidator.validateEmail,
                 ),
                 const SizedBox(height: 20),
                 Text(
                   "Password",
-                  style: TextStyle(
-                    color: Colors.black45,
-                    fontFamily: 'SF-PRO',
-                    fontSize: UtilSize.responsiveFontSize(context, 15),
-                  ),
+                  style: LoginStyle.titleFormStyle(context),
                 ),
-                const BaseTextField(
+                const AppTextField(
                   isPassword: true,
                   hintText: "Password",
                   validator: PasswordValidator.validatePassword,
@@ -59,17 +52,12 @@ class _LoginFormState extends State<LoginForm> {
                 const SizedBox(height: 25),
                 Text(
                   "Forgot passcode",
-                  style: TextStyle(
-                    color: const Color.fromARGB(255, 141, 91, 17),
-                    fontSize: UtilSize.responsiveFontSize(context, 16),
-                    fontFamily: 'SF-PRO',
-                    fontWeight: FontWeight.w400,
-                  ),
+                  style: LoginStyle.forgortPassFormStyle(context),
                 ),
               ],
             ),
             Center(
-              child: CustomElevatedButton(
+              child: PrimaryButton(
                 onPressed: () {
                   if (_formKey.currentState?.validate() ?? false) {
                     ScaffoldMessenger.of(context).showSnackBar(
