@@ -164,91 +164,101 @@ class _HomeScreenState extends State<HomeScreen> {
 
 class CustomTabBar extends StatelessWidget {
   const CustomTabBar({super.key});
-  static double tabWidth = 200.0;
+  static double tabWidth = 100.0;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.centerLeft,
-      padding: EdgeInsets.zero,
-      margin: EdgeInsets.zero,
-      child: DefaultTabController(
-        length: 4,
-        child: TabBar(
-          tabAlignment: TabAlignment.start,
-          isScrollable: true,
-          unselectedLabelColor: Colors.white.withOpacity(0.3),
-          indicatorColor: const Color(0xFFFA4A0C),
-          labelPadding: const EdgeInsets.symmetric(horizontal: 16.0),
-          tabs: [
-            Tab(
-              child: SizedBox(
-                width: tabWidth,
-                child: Center(
-                  child: Text(
-                    "Foods",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontFamily: 'SF-PRO',
-                      fontWeight: FontWeight.normal,
-                      fontSize: UtilSize.responsiveFontSize(context, 14),
-                      height: 0.9,
+    return Expanded(
+      child: Container(
+        child: DefaultTabController(
+          length: 4,
+          child: Scaffold(
+            appBar: AppBar(
+              bottom: TabBar(
+                tabAlignment: TabAlignment.start,
+                isScrollable: true,
+                unselectedLabelColor: Colors.white.withOpacity(0.3),
+                indicatorColor: const Color(0xFFFA4A0C),
+                labelPadding: const EdgeInsets.symmetric(horizontal: 16.0),
+                tabs: [
+                  Tab(
+                    child: SizedBox(
+                      width: tabWidth,
+                      child: Center(
+                        child: Text(
+                          "Foods",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontFamily: 'SF-PRO',
+                            fontWeight: FontWeight.normal,
+                            fontSize: UtilSize.responsiveFontSize(context, 14),
+                            height: 0.9,
+                          ),
+                        ),
+                      ),
                     ),
                   ),
-                ),
-              ),
-            ),
-            Tab(
-              child: SizedBox(
-                width: tabWidth,
-                child: Center(
-                  child: Text(
-                    "Drinks",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontFamily: 'SF-PRO',
-                      fontWeight: FontWeight.normal,
-                      fontSize: UtilSize.responsiveFontSize(context, 14),
-                      height: 0.9,
+                  Tab(
+                    child: SizedBox(
+                      width: tabWidth,
+                      child: Center(
+                        child: Text(
+                          "Drinks",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontFamily: 'SF-PRO',
+                            fontWeight: FontWeight.normal,
+                            fontSize: UtilSize.responsiveFontSize(context, 14),
+                            height: 0.9,
+                          ),
+                        ),
+                      ),
                     ),
                   ),
-                ),
-              ),
-            ),
-            Tab(
-              child: SizedBox(
-                width: tabWidth,
-                child: Center(
-                  child: Text(
-                    "Snacks",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontFamily: 'SF-PRO',
-                      fontWeight: FontWeight.normal,
-                      fontSize: UtilSize.responsiveFontSize(context, 14),
-                      height: 0.9,
+                  Tab(
+                    child: SizedBox(
+                      width: tabWidth,
+                      child: Center(
+                        child: Text(
+                          "Snacks",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontFamily: 'SF-PRO',
+                            fontWeight: FontWeight.normal,
+                            fontSize: UtilSize.responsiveFontSize(context, 14),
+                            height: 0.9,
+                          ),
+                        ),
+                      ),
                     ),
                   ),
-                ),
-              ),
-            ),
-            Tab(
-              child: SizedBox(
-                width: tabWidth,
-                child: Center(
-                  child: Text(
-                    "Sauce",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontFamily: 'SF-PRO',
-                      fontWeight: FontWeight.normal,
-                      fontSize: UtilSize.responsiveFontSize(context, 14),
-                      height: 0.9,
+                  Tab(
+                    child: SizedBox(
+                      width: tabWidth,
+                      child: Center(
+                        child: Text(
+                          "Sauce",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontFamily: 'SF-PRO',
+                            fontWeight: FontWeight.normal,
+                            fontSize: UtilSize.responsiveFontSize(context, 14),
+                            height: 0.9,
+                          ),
+                        ),
+                      ),
                     ),
                   ),
-                ),
+                ],
               ),
             ),
-          ],
+            body: TabBarView(
+              children: [
+                Icon(Icons.flight, size: 100),
+                Icon(Icons.directions_transit, size: 100),
+                Icon(Icons.directions_car, size: 350),
+              ],
+            ),
+          ),
         ),
       ),
     );
