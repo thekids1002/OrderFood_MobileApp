@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:orderfood1/utils/reponsive.dart';
+import 'package:orderfood1/widgets/rounded_image.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -23,8 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return SafeArea(
       child: Scaffold(
         body: Container(
-          padding:
-              EdgeInsets.only(top: UtilSize.responsiveFontSize(context, 35)),
+          
           height: double.infinity,
           decoration: const BoxDecoration(
             color: Color(0xFFF2F2F2),
@@ -125,6 +125,7 @@ class _HomeScreenState extends State<HomeScreen> {
             backgroundColor: const Color(0xFFF2F2F2),
             onTap: _onItemTapped,
             type: BottomNavigationBarType.fixed,
+            elevation: 0.0,
             items: <BottomNavigationBarItem>[
               BottomNavigationBarItem(
                 icon: Icon(
@@ -180,7 +181,7 @@ class CustomTabBar extends StatelessWidget {
             appBar: AppBar(
               toolbarHeight: 0,
               elevation: 0,
-              backgroundColor: Color(0xFFF2F2F2),
+              backgroundColor: const Color(0xFFF2F2F2),
               bottom: PreferredSize(
                 preferredSize:
                     const Size.fromHeight(50.0), // Adjust height as needed
@@ -188,9 +189,10 @@ class CustomTabBar extends StatelessWidget {
                   child: TabBar(
                     tabAlignment: TabAlignment.start,
                     isScrollable: true,
-                    labelColor: Color(0xFFFA4A0C), // Color for selected tab
+                    labelColor:
+                        const Color(0xFFFA4A0C), // Color for selected tab
                     unselectedLabelColor:
-                        Color(0xFF9A9A9D), // Color for unselected tabs
+                        const Color(0xFF9A9A9D), // Color for unselected tabs
                     indicatorColor: const Color(0xFFFA4A0C),
                     labelPadding: const EdgeInsets.symmetric(horizontal: 16.0),
                     dividerColor: Colors.transparent,
@@ -270,7 +272,7 @@ class CustomTabBar extends StatelessWidget {
             ),
             body: const TabBarView(
               children: [
-                Center(child: Icon(Icons.flight, size: 100)),
+                Center(child: TabList()),
                 Center(child: Icon(Icons.directions_transit, size: 100)),
                 Center(child: Icon(Icons.directions_car, size: 100)),
                 Center(child: Icon(Icons.directions_car, size: 100)),
@@ -278,6 +280,117 @@ class CustomTabBar extends StatelessWidget {
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+class TabList extends StatefulWidget {
+  const TabList({super.key});
+
+  @override
+  State<TabList> createState() => _TabListState();
+}
+
+class _TabListState extends State<TabList> {
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      scrollDirection: Axis.horizontal,
+      children: const <Widget>[
+        TabItem(),
+        TabItem(),
+        TabItem(),
+        TabItem(),
+      ],
+    );
+  }
+}
+
+class TabItem extends StatefulWidget {
+  const TabItem({super.key});
+
+  @override
+  State<TabItem> createState() => _TabItemState();
+}
+
+class _TabItemState extends State<TabItem> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(10),
+      color: const Color(0xFFF2F2F2),
+      child: Stack(
+        children: [
+          Container(
+            height: double.infinity,
+            width: 220,
+            decoration: const BoxDecoration(
+              color: Color(0xFFF2F2F2),
+            ),
+          ),
+          Container(
+            margin: const EdgeInsets.only(top: 50),
+            height: 270,
+            width: 220,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30),
+              color: Colors.white,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.08), 
+                  spreadRadius: 0, 
+                  blurRadius: 5,
+                  offset: const Offset(0, 4),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(
+            width: 220,
+            child: Column(
+              children: [
+                Center(
+                  child: RoundedImage(
+                    imagePath: "assets/images/image_23.png",
+                    width: 150,
+                    height: 150,
+                  ),
+                ),
+                SizedBox(
+                  height: 35,
+                ),
+                Center(
+                  child: Text(
+                    textAlign: TextAlign.center,
+                    "Veggie \ntomato mix",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontFamily: "SF-PRO",
+                        fontSize: 22,
+                        fontWeight: FontWeight.w400
+                        ),
+                  ),
+                ),
+                SizedBox(
+                  height: 35,
+                ),
+                Center(
+                  child: Text(
+                    textAlign: TextAlign.center,
+                    "N1,900",
+                    style: TextStyle(
+                        color: Color(0xFFFA4A0C),
+                        fontFamily: "SF-PRO",
+                        fontSize: 17,
+                        fontWeight: FontWeight.w700
+                        ),
+                  ),
+                )
+              ],
+            ),
+          )
+        ],
       ),
     );
   }
