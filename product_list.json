@@ -5,6 +5,11 @@
     "price": "N2,300"
   },
   {
+    "imagePath": "assets/images/image_21.png",
+    "name": "Sweet Corn",
+    "price": "N2,300"
+  },
+  {
     "imagePath": "assets/images/image_22.png",
     "name": "Red Bell Pepper",
     "price": "N2,100"
