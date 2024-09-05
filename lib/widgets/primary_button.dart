@@ -19,7 +19,8 @@ class PrimaryButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.all(15),
-      width: 250,
+      width: 314,
+      height: 70,
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
@@ -38,8 +39,8 @@ class PrimaryButton extends StatelessWidget {
                 ? textColor
                 : const Color(0xFFFA4A0C),
             fontFamily: 'SF-PRO',
-            fontWeight: FontWeight.w300,
-            fontSize: UtilSize.responsiveFontSize(context, 15),
+            fontWeight: FontWeight.w200,
+            fontSize: UtilSize.responsiveFontSize(context, 17),
           ),
         ),
       ),
