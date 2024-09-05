@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:orderfood1/screens/search_result_screen.dart';
 import 'package:orderfood1/utils/reponsive.dart';
 import 'package:orderfood1/widgets/rounded_image.dart';
 
@@ -24,7 +25,6 @@ class _HomeScreenState extends State<HomeScreen> {
     return SafeArea(
       child: Scaffold(
         body: Container(
-          
           height: double.infinity,
           decoration: const BoxDecoration(
             color: Color(0xFFF2F2F2),
@@ -112,6 +112,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                  onSubmitted: (value) => {handleSearch(context, value)},
                 ),
               ),
               const CustomTabBar(), // Sử dụng widget CustomTabBar
@@ -158,6 +159,15 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Future<dynamic> handleSearch(BuildContext context, String paramsSearch) {
+    return Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => SearchResultScreen(initialSearch: paramsSearch),
       ),
     );
   }
@@ -338,8 +348,8 @@ class _TabItemState extends State<TabItem> {
               color: Colors.white,
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.08), 
-                  spreadRadius: 0, 
+                  color: Colors.black.withOpacity(0.08),
+                  spreadRadius: 0,
                   blurRadius: 5,
                   offset: const Offset(0, 4),
                 ),
@@ -368,8 +378,7 @@ class _TabItemState extends State<TabItem> {
                         color: Colors.black,
                         fontFamily: "SF-PRO",
                         fontSize: 22,
-                        fontWeight: FontWeight.w400
-                        ),
+                        fontWeight: FontWeight.w400),
                   ),
                 ),
                 SizedBox(
@@ -383,8 +392,7 @@ class _TabItemState extends State<TabItem> {
                         color: Color(0xFFFA4A0C),
                         fontFamily: "SF-PRO",
                         fontSize: 17,
-                        fontWeight: FontWeight.w700
-                        ),
+                        fontWeight: FontWeight.w700),
                   ),
                 )
               ],
