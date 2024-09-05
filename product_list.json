@@ -1,0 +1,32 @@
+[
+  {
+    "imagePath": "assets/images/image_25.png",
+    "name": "Sweet Corn",
+    "price": "N2,300"
+  },
+  {
+    "imagePath": "assets/images/image_26.png",
+    "name": "Red Bell Pepper",
+    "price": "N2,100"
+  },
+  {
+    "imagePath": "assets/images/image_27.png",
+    "name": "Arugula Leaves",
+    "price": "N1,700"
+  },
+  {
+    "imagePath": "assets/images/image_28.png",
+    "name": "Zucchini",
+    "price": "N1,600"
+  },
+  {
+    "imagePath": "assets/images/image_29.png",
+    "name": "Cherry Tomatoes",
+    "price": "N2,200"
+  },
+  {
+    "imagePath": "assets/images/image_30.png",
+    "name": "Baby Spinach",
+    "price": "N1,800"
+  }
+]
