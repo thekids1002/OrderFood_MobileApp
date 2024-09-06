@@ -29,4 +29,18 @@ class ProductServices {
       return List.empty();
     }
   }
+
+  Future<List<Product>> fetchProductsByCategoryId(int tabId) async {
+    final response = await http.get(Uri.parse(
+        'https://raw.githubusercontent.com/thekids1002/OrderFood_MobileApp/feature/api_sample/get_product_by_tab_id.json'));
+
+    if (response.statusCode == 200) {
+      List<dynamic> jsonData = jsonDecode(response.body);
+        List<Product> products =
+            jsonData.map((item) => Product.fromJson(item)).toList();
+        return products;
+    } else {
+      throw Exception('Failed to load products');
+    }
+  }
 }

@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:orderfood1/widgets/search_result/tab_item.dart';
 
@@ -11,8 +13,6 @@ class SearchResultBody extends StatefulWidget {
   @override
   State<SearchResultBody> createState() => _SearchResultBodyState();
 }
-
-
 
 class _SearchResultBodyState extends State<SearchResultBody> {
   late Future<List<Product>> futureProducts;
