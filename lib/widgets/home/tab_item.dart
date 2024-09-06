@@ -2,14 +2,18 @@ import 'package:flutter/material.dart';
 
 import '../rounded_image.dart';
 
-class TabItem extends StatefulWidget {
-  const TabItem({super.key});
+class TabItem extends StatelessWidget {
+  final String imagePath;
+  final String name;
+  final String price;
 
-  @override
-  State<TabItem> createState() => _TabItemState();
-}
+  const TabItem({
+    super.key,
+    required this.imagePath,
+    required this.name,
+    required this.price,
+  });
 
-class _TabItemState extends State<TabItem> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -41,48 +45,53 @@ class _TabItemState extends State<TabItem> {
               ],
             ),
           ),
-          const SizedBox(
+          SizedBox(
+            height: 300,
             width: 220,
             child: Column(
               children: [
                 Center(
                   child: RoundedImage(
-                    imagePath: "assets/images/image_23.png",
                     width: 150,
                     height: 150,
+                    imagePath: imagePath,
+                  ),
+                ),
+                Expanded(
+                  child: Center(
+                    child: SizedBox(
+                      width: 150,
+                      child: Text(
+                        textAlign: TextAlign.center,
+                        name,
+                        style: const TextStyle(
+                          color: Colors.black,
+                          fontFamily: "SF-PRO",
+                          fontSize: 22,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ),
                   ),
                 ),
                 SizedBox(
-                  height: 35,
-                ),
-                Center(
-                  child: Text(
-                    textAlign: TextAlign.center,
-                    "Veggie \ntomato mix",
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: "SF-PRO",
-                        fontSize: 22,
-                        fontWeight: FontWeight.w400),
-                  ),
-                ),
-                SizedBox(
-                  height: 35,
-                ),
-                Center(
-                  child: Text(
-                    textAlign: TextAlign.center,
-                    "N1,900",
-                    style: TextStyle(
+                  height: 20,
+                  child: Center(
+                    child: Text(
+                      textAlign: TextAlign.center,
+                      price,
+                      style: const TextStyle(
                         color: Color(0xFFFA4A0C),
                         fontFamily: "SF-PRO",
                         fontSize: 17,
-                        fontWeight: FontWeight.w700),
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
                   ),
-                )
+                ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );

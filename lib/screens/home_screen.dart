@@ -4,7 +4,7 @@ import 'package:orderfood1/screens/search_result_screen.dart';
 
 import '../utils/message_util.dart';
 import '../utils/reponsive.dart';
-import '../widgets/home/custom_tab_bar.dart';
+import '../widgets/home/home_tab_bar.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -30,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Colors.transparent,
                     child: InkWell(
                       onTap: () => {
-                        MessageUtil.showToast("Cart clicked"),
+                        MessageUtil.showToast("Drawer menu clicked"),
                       },
                       child: Container(
                         height: UtilSize.responsiveFontSize(context, 50),
@@ -111,7 +111,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   onSubmitted: (value) => {handleSearch(context, value)},
                 ),
               ),
-              const CustomTabBar(),
+              const HomeScreenTabBar(),
             ],
           ),
         );
