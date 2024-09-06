@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:orderfood1/screens/order_screen.dart';
+import 'package:orderfood1/screens/get_staterd_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         resizeToAvoidBottomInset: false,
-        body: OrderScreen(),
+        body: GetStatredScreen(),
       ),
     );
   }

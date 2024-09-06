@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:orderfood1/screens/login_screen.dart';
 import 'package:orderfood1/utils/reponsive.dart';
 
 import '../widgets/primary_button.dart';
@@ -83,7 +84,8 @@ class GetStatredScreen extends StatelessWidget {
                     left: 0,
                     right: 0,
                     child: Container(
-                      height: UtilSize.responsiveFontSize(context,dheight * 0.5),
+                      height:
+                          UtilSize.responsiveFontSize(context, dheight * 0.5),
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: [
@@ -103,7 +105,13 @@ class GetStatredScreen extends StatelessWidget {
           Center(
             child: PrimaryButton(
               text: "Get Started",
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(
+                    builder: (context) => const LoginScreen(),
+                  ),
+                );
+              },
             ),
           )
         ],

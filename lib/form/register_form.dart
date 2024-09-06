@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:orderfood1/screens/main_screen.dart';
 import 'package:orderfood1/themes/login_styles.dart';
 import 'package:orderfood1/validation/email_validator.dart';
 import 'package:orderfood1/validation/password_validator.dart';
@@ -69,8 +70,10 @@ class _RegisterFormState extends State<RegisterForm> {
               child: PrimaryButton(
                 onPressed: () {
                   if (_formKey.currentState?.validate() ?? false) {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('Processing Data')),
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const MainScreen(),
+                      ),
                     );
                   }
                 },
