@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'history_screen.dart';
 import 'home_screen.dart';
-import '../widgets/rounded_image.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
