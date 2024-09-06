@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:orderfood1/screens/main_screen.dart';
 import 'package:orderfood1/themes/login_styles.dart';
 import 'package:orderfood1/utils/reponsive.dart';
 import 'package:orderfood1/validation/email_validator.dart';
@@ -59,11 +60,7 @@ class _LoginFormState extends State<LoginForm> {
             Center(
               child: PrimaryButton(
                 onPressed: () {
-                  if (_formKey.currentState?.validate() ?? false) {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('Processing Data')),
-                    );
-                  }
+                  handleLoginSubmit(context);
                 },
                 text: "Login",
                 btnColor: const Color(0xFFFA4A0C),
@@ -74,5 +71,15 @@ class _LoginFormState extends State<LoginForm> {
         ),
       ),
     );
+  }
+
+  void handleLoginSubmit(BuildContext context) {
+    if (_formKey.currentState?.validate() ?? false) {
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(
+          builder: (context) => const MainScreen(),
+        ),
+      );
+    }
   }
 }
