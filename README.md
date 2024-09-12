@@ -1,16 +1,11 @@
-# orderfood1
+# OrderFood_MobileApp
+Mobile App OrderFood Using Flutter
 
-A new Flutter project.
+<br>
+<br>
+Splash Screen <br>
+<img src="https://github.com/user-attachments/assets/151830ca-f021-4c0c-8dd6-4d879ddf2f2b" width="300" />
+<br>
+Login Screen <br>
+<img src="https://github.com/user-attachments/assets/044704f8-4341-4c10-8bd6-04e896bb1ab6" width="300" />
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
