@@ -1,97 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OrderFood Mobile App</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f9f9f9;
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        .section {
-            margin-bottom: 40px;
-        }
-        .screenshot {
-            text-align: center;
-            margin: 10px 0;
-        }
-        img {
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        .description {
-            text-align: center;
-            font-size: 16px;
-            color: #666;
-            margin: 5px 0 15px 0;
-        }
-    </style>
-</head>
-<body>
+# OrderFood Mobile App
 
-    <h1>OrderFood Mobile App</h1>
-    
-    <div class="section">
-        <h2>Splash Screen</h2>
-        <p class="description">Welcome to OrderFood! Your ultimate food ordering app.</p>
-        <div class="screenshot">
-            <img src="https://github.com/user-attachments/assets/151830ca-f021-4c0c-8dd6-4d879ddf2f2b" width="300" alt="Splash Screen">
-        </div>
-    </div>
+## 🌟 Giới thiệu
+OrderFood là ứng dụng đặt món ăn nhanh chóng và tiện lợi, giúp bạn dễ dàng tìm kiếm và đặt hàng món ăn yêu thích.
 
-    <div class="section">
-        <h2>Login Screen</h2>
-        <p class="description">Secure login to access your favorite foods.</p>
-        <div class="screenshot">
-            <img src="https://github.com/user-attachments/assets/044704f8-4341-4c10-8bd6-04e896bb1ab6" width="300" alt="Login Screen">
-        </div>
-    </div>
+---
 
-    <div class="section">
-        <h2>Register Screen</h2>
-        <p class="description">Create your account to get started.</p>
-        <div class="screenshot">
-            <img src="https://github.com/user-attachments/assets/044704f8-4341-4c10-8bd6-04e896bb1ab6" width="300" alt="Register Screen">
-        </div>
-    </div>
+## 📱 Các màn hình trong ứng dụng
 
-    <div class="section">
-        <h2>Home Screen</h2>
-        <p class="description">Explore a wide range of delicious food options.</p>
-        <div class="screenshot">
-            <img src="https://github.com/user-attachments/assets/0c8a62c9-f235-43ca-afaf-fd82f51cb74b" width="300" alt="Home Screen">
-        </div>
-    </div>
+### 1. Splash Screen
+![Splash Screen](https://github.com/user-attachments/assets/151830ca-f021-4c0c-8dd6-4d879ddf2f2b)
+*Chào mừng đến với OrderFood!*
 
-    <div class="section">
-        <h2>Order Screen</h2>
-        <p class="description">Place your order quickly and easily.</p>
-        <div class="screenshot">
-            <img src="https://github.com/user-attachments/assets/f3c092f7-08e4-4439-8935-b9d2cd7ab415" width="300" alt="Order Screen">
-        </div>
-    </div>
+---
 
-    <div class="section">
-        <h2>History Screen</h2>
-        <p class="description">View your past orders and re-order with a click.</p>
-        <div class="screenshot">
-            <img src="https://github.com/user-attachments/assets/f8a4cdc0-0eb1-47b2-b981-667e81817f33" width="300" alt="History Screen">
-        </div>
-    </div>
+### 2. Login Screen
+![Login Screen](https://github.com/user-attachments/assets/044704f8-4341-4c10-8bd6-04e896bb1ab6)
+*Đăng nhập để truy cập các món ăn yêu thích của bạn.*
 
-    <div class="section">
-        <h2>Search Result Screen</h2>
-        <p class="description">Find your favorite dishes in seconds.</p>
-        <div class="screenshot">
-            <img src="https://github.com/user-attachments/assets/012dbcf6-85bc-4f58-a8c5-5c4c37445be0" width="300" alt="Search Result Screen">
-        </div>
-    </div>
+---
 
-</body>
-</html>
+### 3. Register Screen
+![Register Screen](https://github.com/user-attachments/assets/044704f8-4341-4c10-8bd6-04e896bb1ab6)
+*Tạo tài khoản của bạn để bắt đầu.*
+
+---
+
+### 4. Home Screen
+![Home Screen](https://github.com/user-attachments/assets/0c8a62c9-f235-43ca-afaf-fd82f51cb74b)
+*Khám phá một loạt các món ăn ngon miệng.*
+
+---
+
+### 5. Order Screen
+![Order Screen](https://github.com/user-attachments/assets/f3c092f7-08e4-4439-8935-b9d2cd7ab415)
+*Đặt hàng nhanh chóng và dễ dàng.*
+
+---
+
+### 6. History Screen
+![History Screen](https://github.com/user-attachments/assets/f8a4cdc0-0eb1-47b2-b981-667e81817f33)
+*Xem các đơn hàng trước đây và đặt lại chỉ với một cú nhấp chuột.*
+
+---
+
+### 7. Search Result Screen
+![Search Result Screen](https://github.com/user-attachments/assets/012dbcf6-85bc-4f58-a8c5-5c4c37445be0)
+*Tìm kiếm các món ăn yêu thích trong tích tắc.*
+
+---
+
+## 📥 Tải ứng dụng
+Hãy tải và trải nghiệm OrderFood ngay hôm nay để không bỏ lỡ những món ăn ngon!
+
+## 📞 Liên hệ
+Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ với chúng tôi qua email: support@orderfood.com
